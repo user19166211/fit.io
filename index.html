@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitness Progress Tracker</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body Weight Tracker</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Fitness Progress Tracker</h1>
-    <div class="input-section">
-      <label for="target-calories">Target Calorie Burn/Day:</label>
-      <input type="number" id="target-calories" placeholder="Enter target calories">
-      <label for="calories-intake">Daily Calorie Intake:</label>
-      <input type="number" id="calories-intake" placeholder="Enter daily calorie intake">
-      <label for="calories-burned">Daily Calorie Burn:</label>
-      <input type="number" id="calories-burned" placeholder="Enter daily calorie burn">
-      <label for="body-weight">Daily Body Weight:</label>
-      <input type="number" id="body-weight" placeholder="Enter daily body weight">
-      <button onclick="addData()">Add Data</button>
-    </div>
-    <div class="calendar-section">
-      <h2>Calendar</h2>
-      <div id="calendar"></div>
-    </div>
-    <div class="graph-section">
-      <canvas id="progress-chart"></canvas>
-    </div>
-  </div>
-  <script src="script.js"></script>
+
+<h1>Body Weight Tracker</h1>
+
+<div id="inputSection">
+  <label for="targetWeight">Target Body Weight:</label>
+  <input type="number" id="targetWeight" placeholder="Enter your target weight (kg)">
+  
+  <label for="date">Date:</label>
+  <input type="date" id="date">
+  
+  <label for="weight">Body Weight:</label>
+  <input type="number" id="weight" placeholder="Enter your body weight (kg)">
+  
+  <button onclick="addData()">Add Data</button>
+</div>
+
+<canvas id="myChart"></canvas>
+
+<script src="script.js"></script>
 </body>
 </html>
